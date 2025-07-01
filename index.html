@@ -3,13 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>calculadora con DOM y eventos</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>esto es una calculadora manual</h1>
+    <!-- <h1>esto es una calculadora manual</h1>
     <p>Abre la consola para ver cómo funciona.</p>
     <p>si saliste y quieres volver a realizar operaciones pulsa la tecla f5</p>
     <p>explicación: hice una calculadora interactiva a traves de prompt y se me ocurrio usar arrays para ir guardando el historial de operaciones, fue la parte mas complicada para codear</p>
-    <script src="./calcu.js"></script>
+    <script src="./calcu.js"></script> -->
+    
+
+  <div class="calculadora">
+    <input type="text" id="pantalla" disabled>
+    <br>
+
+    <button class="boton" onclick="agregar('7')">7</button>
+    <button class="boton" onclick="agregar('8')">8</button>
+    <button class="boton" onclick="agregar('9')">9</button>
+    <button class="boton" onclick="agregar('/')">/</button>
+    <br>
+
+    <button class="boton" onclick="agregar('4')">4</button>
+    <button class="boton" onclick="agregar('5')">5</button>
+    <button class="boton" onclick="agregar('6')">6</button>
+    <button class="boton" onclick="agregar('*')">*</button>
+    <br>
+
+    <button class="boton" onclick="agregar('1')">1</button>
+    <button class="boton" onclick="agregar('2')">2</button>
+    <button class="boton" onclick="agregar('3')">3</button>
+    <button class="boton" onclick="agregar('-')">-</button>
+    <br>
+
+    <button class="boton" onclick="agregar('0')">0</button>
+    <button class="boton" onclick="agregar('.')">.</button>
+    <button class="boton" onclick="calcular()">=</button>
+    <button class="boton" onclick="agregar('+')">+</button>
+    <br>
+
+    <button class="boton" onclick="borrar()">C</button>
+  </div>
+
+  <div id="historial">
+    <h3>Historial:</h3>
+    <ul id="listaHistorial"></ul>
+  </div>
+  <script src="./calcu.js"></script>
 </body>
 </html>
