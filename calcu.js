@@ -162,7 +162,7 @@ function eliminarOperacion(index) {
   item.classList.remove("animate__slideInRight");
   item.classList.add("animate__animated", "animate__slideOutRight");
 
-  // Esperar el fin de la animación (900ms) para eliminar
+  
   item.addEventListener("animationend", () => {
     // Eliminar del array historial
     historial.splice(index, 1);
@@ -173,7 +173,7 @@ function eliminarOperacion(index) {
     // Volver a mostrar el historial actualizado
     mostrarHistorial();
 
-    // Mostrar notificación con Toastify (opcional)
+    // Mostrar notificación con Toastify
     Toastify({
       text: `Operación eliminada.`,
       duration: 3000,
@@ -212,8 +212,8 @@ document.addEventListener("keydown", function(event) {
   if (teclasValidas.includes(tecla)) {
     agregar(tecla);  // Agrega el carácter a la pantalla
   } else if (tecla === "Enter") {
-    calcular();      // Ejecuta cálculo con Enter
+    calcular();      
   } else if (tecla === "Backspace") {
-    pantalla.value = pantalla.value.slice(0, -1);       // Borra todo con Backspace (podés hacer borrado parcial si querés)
+    pantalla.value = pantalla.value.slice(0, -1);       // va eliminando uno en uno
   }
 });
