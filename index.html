@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculadora con DOM y eventos</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -13,6 +16,13 @@
     <p>explicación: hice una calculadora interactiva a traves de prompt y se me ocurrio usar arrays para ir guardando el historial de operaciones, fue la parte mas complicada para codear</p>
     <script src="./calcu.js"></script> -->
     
+<div class="darkmode-toggle">
+  <label>
+    <input type="checkbox" id="toggleDarkMode">
+    <span class="slider"></span>
+    <span class="label-text">Dark/Light Mode</span>
+  </label>
+</div>
 
   <div class="calculadora">
     <input type="text" id="pantalla" disabled>

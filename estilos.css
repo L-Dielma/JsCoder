@@ -32,3 +32,85 @@ body {
   margin-top: 20px;
   text-align: left;
 }
+
+/* Estilo del botón slider */
+.darkmode-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo básico del switch */
+.darkmode-toggle input[type="checkbox"] {
+  display: none;
+}
+
+.darkmode-toggle .slider {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition: background-color 0.3s;
+}
+
+.darkmode-toggle .slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.darkmode-toggle input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.darkmode-toggle input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.darkmode-toggle .label-text {
+  font-size: 14px;
+  vertical-align: middle;
+  color: inherit;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Estilos para modo oscuro */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .calculadora {
+  background-color: #333;
+  border-color: #555;
+}
+
+body.dark-mode .boton {
+  background-color: #444;
+  color: white;
+}
+
+body.dark-mode #pantalla {
+  background-color: #222;
+  color: white;
+  border: 1px solid #666;
+}
